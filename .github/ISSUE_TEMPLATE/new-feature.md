@@ -4,7 +4,7 @@ about: Issue template for feature request
 title: "[FEAT]:"
 labels: enhancement
 assignees: ''
-
+project: matcha
 ---
 
 # New feature

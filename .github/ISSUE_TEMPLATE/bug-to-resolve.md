@@ -3,8 +3,8 @@ name: Bug-to-resolve
 about: Issue template for bug that needs to be resolved
 title: "[BUG]:"
 labels: bug
-assignees: nabitbol
-
+assignees: ''
+project: matcha
 ---
 
 # Bug to resolve

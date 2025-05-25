@@ -4,7 +4,7 @@ about: Issue template for bug that needs to be resolved
 title: "[BUG]:"
 labels: bug
 assignees: ''
-project: matcha
+projects: matcha
 ---
 
 # Bug to resolve

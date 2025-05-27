@@ -9,4 +9,4 @@ full typescript.
 
 Here is an overview of core the applciation system:
 
-[Matcha system design](/notes/assets/matcha_diagram_light_background.png)
+![Matcha system design](/notes/assets/matcha_diagram_light_background.png)

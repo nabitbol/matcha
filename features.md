@@ -1,14 +1,19 @@
 ## IV.1 Registration and Signing-in
 
-- [ ] Register user with the following fields: last name, first name, username, email, password
-- [ ] Email verification via unique link before user can sign in
-- [ ] Secure password policy (e.g. min. 8 chars, upper/lowercase, numbers)
-- [ ] Show success message after registration
-- [ ] Login with username and password
-- [ ] Error handling for invalid credentials or unverified account
-- [ ] "Forgot password?" link redirects to password reset flow
-- [ ] Logout button visible from anywhere on the site
-- [ ] On logout, redirect user to homepage or login page
+- [ ] Sign up
+  - [ ] Email verification
+- [ ] Sign in
+- [ ] Password reset
+- [ ] Disconnect
+- [ ] Edit profile
+  - First name
+  - Last name
+  - Username
+ - E-mail
+ - Password
+ - Bio
+ - Preferences
+ - ....
 
 ## IV.2 User Profile
 

@@ -23,5 +23,5 @@ app.get("/panel", (_req, res) => {
 });
 
 app.listen(4000, () => {
-  console.log("Server running on http://localhost:4000");
+  console.log("Backend running on http://localhost:4000");
 });

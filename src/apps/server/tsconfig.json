@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "target": "es6",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outDir": "dist/",
+    "skipLibCheck": true
+  },
+  "baseUrl": ".",
+  "paths": {
+    "*": ["node_modules/*"]
+  },
+  "include": ["./*.ts"]
+}

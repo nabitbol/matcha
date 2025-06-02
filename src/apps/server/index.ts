@@ -1,25 +1,11 @@
 import { renderTrpcPanel } from "trpc-panel";
-import { initTRPC } from "@trpc/server";
+import { appRouter } from "./appRouter.ts";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import express from "express";
-import { z } from "zod";
 import cors from "cors";
 
 const app = express();
 app.use(cors());
-
-const t = initTRPC.create();
-
-const appRouter = t.router({
-  getServerStatus: t.procedure
-    .input(z.void())
-    .output(z.object({ status: z.string() }))
-    .query(() => {
-      return { status: "ok" };
-    }),
-});
-
-export type AppRouter = typeof appRouter;
 
 app.use(
   "/trpc",
@@ -28,12 +14,11 @@ app.use(
   })
 );
 
-// ✅ use `get` instead of `use` for route handler
+// API schema page
 app.get("/panel", (_req, res) => {
   const panelHtml = renderTrpcPanel(appRouter, {
     url: "http://localhost:4000/trpc",
   });
-
   res.send(panelHtml);
 });
 

@@ -103,5 +103,5 @@
 
 ## Back Office
 
-- [ ] User management page
-- [ ] Reports & moderation page
+- [ ] User management
+- [ ] Reports & moderation

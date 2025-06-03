@@ -18,7 +18,7 @@
 - [ ] Set a main profile picture
 
 
-- [ ] Edit Profile Page
+- [ ] Edit Profile
 
 ### 👁️ Viewed Profiles
 

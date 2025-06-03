@@ -2,12 +2,11 @@
   "name": "@matcha/backend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "nodemon",
     "build": "tsc  --project tsconfig.json",
     "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
+    "lint": "eslint \"./**/*.ts\""
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -15,6 +14,8 @@
     "zod": "^3.25.42"
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@trpc/server": "^10.45.2",
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",

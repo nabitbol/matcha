@@ -1,0 +1,31 @@
+name: CI - Lint & Format Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint_and_format:
+    name: Lint and Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        # Use of --frozen-lockfile to ensure exact version
+        run: pnpm insall --frozen-lockfile 
+
+      - name: Run Eslint
+        run: pnpm lint
+
+     - name: Run Prettier Format Checl
+       run: pnpm check-format

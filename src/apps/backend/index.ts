@@ -1,27 +1,27 @@
-import { renderTrpcPanel } from "trpc-panel";
-import { appRouter } from "./appRouter.ts";
-import * as trpcExpress from "@trpc/server/adapters/express";
-import express from "express";
-import cors from "cors";
+import { renderTrpcPanel } from 'trpc-panel';
+import { appRouter } from './appRouter.ts';
+import * as trpcExpress from '@trpc/server/adapters/express';
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 app.use(cors());
 
 app.use(
-  "/trpc",
+  '/trpc',
   trpcExpress.createExpressMiddleware({
     router: appRouter,
-  })
+  }),
 );
 
 // API schema page
-app.get("/panel", (_req, res) => {
+app.get('/panel', (_req, res) => {
   const panelHtml = renderTrpcPanel(appRouter, {
-    url: "http://localhost:4000/trpc",
+    url: 'http://localhost:4000/trpc',
   });
   res.send(panelHtml);
 });
 
 app.listen(4000, () => {
-  console.log("Backend running on http://localhost:4000");
+  console.log('Backend running on http://localhost:4000');
 });

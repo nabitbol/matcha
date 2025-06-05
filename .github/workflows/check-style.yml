@@ -22,10 +22,10 @@ jobs:
 
       - name: Install dependencies
         # Use of --frozen-lockfile to ensure exact version
-        run: pnpm insall --frozen-lockfile 
+        run: pnpm install --frozen-lockfile 
 
       - name: Run Eslint
         run: pnpm lint
 
-     - name: Run Prettier Format Checl
-       run: pnpm check-format
+      - name: Run Prettier Format Checl
+        run: pnpm check-format

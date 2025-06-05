@@ -9,6 +9,10 @@ jobs:
   lint_and_format:
     name: Lint and Format Check
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./src
 
     steps:
       - name: checkout repository
@@ -27,5 +31,5 @@ jobs:
       - name: Run Eslint
         run: pnpm lint
 
-     - name: Run Prettier Format Checl
-       run: pnpm check-format
+      - name: Run Prettier Format Checl
+        run: pnpm check-format

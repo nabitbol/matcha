@@ -1,20 +1,8 @@
-import { router, publicProcedure } from './trpcInit.ts';
-import { z } from 'zod';
+import userRouter from './users/router';
+import { router } from '@matcha/trpc';
 
 const appRouter = router({
-  getServerStatus: publicProcedure
-    .input(z.void())
-    .output(z.object({ status: z.string() }))
-    .query(() => {
-      return { status: 'ok' };
-    }),
-
-  getSecondProcedure: publicProcedure
-    .input(z.void())
-    .output(z.object({ status: z.string() }))
-    .query(() => {
-      return { status: 'ko' };
-    }),
+  user: userRouter,
 });
 
 // export type definition of API

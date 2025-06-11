@@ -16,6 +16,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@matcha/trpc": "workspace:*",
     "@trpc/server": "^10.45.2",
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",
